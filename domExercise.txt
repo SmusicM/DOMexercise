@@ -1,0 +1,98 @@
+1. Select the section with an id of container without using querySelector.
+
+const secId = document.getElementById("container")
+
+2. Select the section with an id of container using querySelector.
+
+document.querySelector("section#container")
+document.querySelector("#container")
+
+3. Select all of the list items with a class of “second”.
+const secLiItem = document.getElementsByClassName("second")
+const secLiItem = document.querySelectorAll(".second")
+
+4. Select a list item with a class of third, but only the list item inside of the ol tag.
+
+const ordLi = document.querySelectorAll("ol li.third")
+--or--
+const ordLi = document.querySelectorAll("ol .third")
+
+
+
+5. Give the section with an id of container the text “Hello!”.
+
+const  sectCon = document.getElementById("container")
+sectCon.innerText = "hello"
+--or--
+const  sectCon = document.querySelector("#container")
+sectCon.innerText = "hello"
+
+6. Add the class main to the div with a class of footer.
+
+--for changing--
+const clasDiv = document.querySelector("div.footer")
+clasDiv.setAttribute("class" ,"main")
+--for adding---
+
+const clasDiv = document.querySelector(".footer")
+clasDiv.classList.add("main")
+
+const clasDiv = document.querySelector("div .footer")
+clasDiv.classList.add("main")
+
+const clasDiv = document.getElementsByClassName("footer")
+clasDiv.classList.add("main")
+
+
+7. Remove the class main on the div with a class of footer.
+
+const clasDiv = document.querySelector("div.footer")
+clasDiv.classList.remove("main")
+
+8. Create a new li element.
+
+const newLi = document.createElement("li")
+
+9. Give the li the text “four”.
+
+const newLi = document.createElement("li")           //this one
+newLi.innerText = "four"
+
+
+const newLi = document.createElement("li")
+const newLiTxt = newLi.innerText = ""
+
+
+
+10. Append the li to the ul element.
+
+const ul = document.querySelector("ul")
+
+const newLi = document.createElement("li") 
+ul.Append("newLi")
+
+11. Loop over all of the lis inside the ol tag and give them a background color of “green”.
+
+const allLi = document.querySelectorAll("ol li")
+allLi.setAttribute("style" ,"backgorundColor: green")
+
+ --to loop and set color--
+
+const allLi = document.querySelectorAll("ol li")
+for(let allLis of allLi){
+    allLi.setAttribute("style" ,"backgorundColor: green")
+}
+
+const allLi = document.querySelectorAll("ol li")   //this is it
+for(let li of allLi){
+    li.style.backgroundColor = "green"
+}
+
+
+12. Remove the div with a class of footer
+
+const remvDiv = document.querySelector("div.footer")
+remvDiv.remove();
+
+
+
